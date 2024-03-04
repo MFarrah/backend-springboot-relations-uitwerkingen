@@ -1,4 +1,2 @@
-package mfarr.backendspringbootrelationsuitwerkingen.services;
-
-public class RemoteControlService {
+package mfarr.backendspringbootrelationsuitwerkingen.services;public class RemoteControlService {
 }
