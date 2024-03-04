@@ -17,7 +17,7 @@ public class TelevisionWallBracket {
     @JoinColumn(name = "television_id")
     private Television television;
 
-    // Dit is de owner kan van de relatie. Er staat een foreign key in de database
+
     @ManyToOne
     @MapsId("wallBracketId")
     @JoinColumn(name = "wall_bracket_id")

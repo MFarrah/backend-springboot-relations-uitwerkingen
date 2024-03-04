@@ -80,23 +80,21 @@ public class TelevisionController {
         return ResponseEntity.ok().body(dto);
     }
 
-    // Onderstaande 2 methodes zijn endpoints om andere entiteiten toe te voegen aan de Television.
-    // Dit is één manier om dit te doen, met één PathVariable en één RequestBody.
+
     @PutMapping("/televisions/{id}/remotecontroller")
     public ResponseEntity<Object> assignRemoteControllerToTelevision(@PathVariable("id") Long id,@Valid @RequestBody IdInputDto input) {
         televisionService.assignRemoteControllerToTelevision(id, input.id);
         return ResponseEntity.noContent().build();
     }
 
-    //Dit is een andere manier om het te doen, met twee Pathvariables, maar het kan uiteraard ook anders.
+
     @PutMapping("/televisions/{id}/{ciModuleId}")
     public ResponseEntity<Object> assignCIModuleToTelevision(@PathVariable("id") Long id, @PathVariable("ciModuleId") Long ciModuleId) {
         televisionService.assignCIModuleToTelevision(id, ciModuleId);
         return ResponseEntity.noContent().build();
     }
 
-    // Deze methode is om alle wallbrackets op te halen die aan een bepaalde television gekoppeld zijn.
-    // Deze methode maakt gebruik van de televisionWallBracketService.
+
     @GetMapping("/televisions/wallBrackets/{televisionId}")
     public ResponseEntity<Collection<WallBracketDto>> getWallBracketsByTelevisionId(@PathVariable("televisionId") Long televisionId){
         return ResponseEntity.ok(televisionWallBracketService.getWallBracketsByTelevisionId(televisionId));

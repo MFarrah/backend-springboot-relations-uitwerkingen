@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 
 @Entity
-public class RemoteControl {
+public class RemoteController {
 
     @Id
     @GeneratedValue
@@ -23,18 +23,9 @@ public class RemoteControl {
     @OneToOne(mappedBy = "remoteController")
     Television television;
 
-//    De constructors hoeven niet gemaakt te worden mag wel
-//    public RemoteController() {
-//    }
-//
-//    public RemoteController( String compatibleWith, String batteryType, String name, String brand, Double price, Integer originalStock) {
-//        this.compatibleWith = compatibleWith;
-//        this.batteryType = batteryType;
-//        this.name = name;
-//        this.brand = brand;
-//        this.price = price;
-//        this.originalStock = originalStock;
-//    }
+
+
+
 
     public Long getId() {
         return id;

@@ -1,4 +1,4 @@
-/*
+
 INSERT INTO wall_bracket (id, size, adjustable, name, price)
 VALUES (1001, '25X32', false, 'LG bracket', 32.23),
        (1002, '25X32/32X40', true, 'LG bracket', 32.23),
@@ -34,4 +34,4 @@ values (1005, 1001),
        (1003, 1003),
        (1004, 1003),
        (1001, 1004),
-       (1001, 1005);*/
+       (1001, 1005);

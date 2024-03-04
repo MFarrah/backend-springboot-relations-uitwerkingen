@@ -1,7 +1,6 @@
 package mfarr.backendspringbootrelationsuitwerkingen.dtos;
 
-
-public class RemoteControlDto {
+public class RemoteControllerDto {
 
     public Long id;
     public String compatibleWith;

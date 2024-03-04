@@ -10,7 +10,6 @@ import java.util.Collection;
 @Entity
 public class Television {
 
-    //  Een entiteit moet een primary key bevatten(id)
     @Id
     @GeneratedValue
     Long id;
@@ -33,26 +32,25 @@ public class Television {
     private Integer originalStock;
     private Integer sold;
 
-    // Dit is de owner kan van de relatie. Er staat een foreign key in de database
-    @OneToOne
-    RemoteControl remoteControl;
 
-    // Dit is de owner kan van de relatie. Er staat een foreign key in de database
+    @OneToOne
+    RemoteController remoteController;
+
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ci_module_id")
     private CIModule ciModule;
 
-    // Dit is de target kant van de relatie. Er staat niks in de database
+
     @OneToMany(mappedBy = "television")
     @LazyCollection(LazyCollectionOption.FALSE)
     @JsonIgnore
     Collection<TelevisionWallBracket> televisionWallBrackets;
 
-    //    constructors hoeven niet per se aangemaakt te worden
-    // Een default constructor
+
     public Television() {}
 
-    // Een constructor met alle gevraagde variable
+
     public Television(
             Long id,
             String type,
@@ -90,7 +88,7 @@ public class Television {
         this.sold = sold;
     }
 
-    //  Alle variable getters
+
     public Long getId() {
         return id;
     }
@@ -159,9 +157,6 @@ public class Television {
         return sold;
     }
 
-    public RemoteControl getRemoteController() {
-        return remoteControl;
-    }
 
     public CIModule getCiModule() {
         return ciModule;
@@ -240,12 +235,17 @@ public class Television {
         this.sold = sold;
     }
 
-    public void setRemoteController(RemoteControl remoteControl) {
-        this.remoteControl = remoteControl;
-    }
 
     public void setCiModule(CIModule ciModule) {
         this.ciModule = ciModule;
+    }
+
+    public RemoteController getRemoteController() {
+        return remoteController;
+    }
+
+    public void setRemoteController(RemoteController remoteController) {
+        this.remoteController = remoteController;
     }
 
     public void setTelevisionWallBrackets(Collection<TelevisionWallBracket> televisionWallBrackets) {

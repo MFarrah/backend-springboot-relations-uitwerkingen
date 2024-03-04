@@ -1,20 +1,20 @@
 package mfarr.backendspringbootrelationsuitwerkingen.controllers;
 
-import mfarr.backendspringbootrelationsuitwerkingen.dtos.RemoteControlDto;
-import mfarr.backendspringbootrelationsuitwerkingen.services.RemoteControlService;
+import mfarr.backendspringbootrelationsuitwerkingen.dtos.RemoteControllerDto;
+import mfarr.backendspringbootrelationsuitwerkingen.services.RemoteControllerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-// Dit is de Controller klasse van de RemoteController entiteit en heeft vergelijkbare methodes als de TelevisionController.
+
 @RestController
 public class RemoteControllerController {
-    private final RemoteControlService remoteControllerService;
+    private final RemoteControllerService remoteControllerService;
 
-    public RemoteControllerController(RemoteControlService remoteControlService) {
-        this.remoteControllerService = remoteControlService;
+    public RemoteControllerController(RemoteControllerService remoteControllerService) {
+        this.remoteControllerService = remoteControllerService;
     }
 
 

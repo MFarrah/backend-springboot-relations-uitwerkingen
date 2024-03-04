@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-// Dit is de Controller klasse van de CIModule entiteit en heeft vergelijkbare methodes als de TelevisionController
+
 @RestController
 public class CIModuleController {
     private final CIModuleService ciModuleService;

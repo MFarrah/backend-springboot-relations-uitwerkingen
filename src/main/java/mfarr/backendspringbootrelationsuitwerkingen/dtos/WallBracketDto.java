@@ -1,6 +1,5 @@
 package mfarr.backendspringbootrelationsuitwerkingen.dtos;
 
-// validators mogen jullie eventueel zelf toevoegen
 
 public class WallBracketDto {
 

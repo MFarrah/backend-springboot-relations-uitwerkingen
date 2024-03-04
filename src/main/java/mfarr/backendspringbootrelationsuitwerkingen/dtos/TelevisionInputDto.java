@@ -5,11 +5,11 @@ import jakarta.validation.constraints.*;
 
 public class TelevisionInputDto {
 
-    @NotNull(message = "Type is required") // Type moet ingevuld verplicht worden in je JSON, je krijgt een message als je dit niet doet.
+    @NotNull(message = "Type is required")
     private String type;
     @NotNull(message = "Brand is required")
     private String brand;
-    @Size(max = 20, message = "Name must be between 0-20 characters") // maximale lengte van de string, min is automatisch 0.
+    @Size(max = 20, message = "Name must be between 0-20 characters")
     private String name;
     @Positive(message = "Price must be higher than zero")
     private Double price;

@@ -54,8 +54,7 @@ public class WallBracketController {
         return ResponseEntity.ok(returnDto);
     }
 
-    // Deze methode haalt alle televisies op die aan een bepaalde wallbracket gekoppeld zijn.
-    // Deze methode maakt gebruikt van de televisionWallBracketService.
+
     @GetMapping("/wallbrackets/televisions/{wallBracketId}")
     public ResponseEntity<Collection<TelevisionDto>> getTelevisionsByWallBracketId(@PathVariable("wallBracketId") Long wallBracketId){
         return ResponseEntity.ok(televisionWallBracketService.getTelevisionsByWallBracketId(wallBracketId));

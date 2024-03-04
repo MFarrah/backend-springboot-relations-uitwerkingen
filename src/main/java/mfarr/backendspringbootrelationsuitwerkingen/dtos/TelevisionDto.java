@@ -22,6 +22,14 @@ public class TelevisionDto {
     private CIModuleDto ciModuleDto;
     private RemoteControllerDto remoteControllerDto;
 
+    public RemoteControllerDto getRemoteControllerDto() {
+        return remoteControllerDto;
+    }
+
+    public void setRemoteControllerDto(RemoteControllerDto remoteControllerDto) {
+        this.remoteControllerDto = remoteControllerDto;
+    }
+
     public TelevisionDto() {
     }
 
@@ -117,9 +125,6 @@ public class TelevisionDto {
         return ciModuleDto;
     }
 
-    public RemoteControllerDto getRemoteControllerDto() {
-        return remoteControllerDto;
-    }
 
     public void setId(Long id) {
         this.id = id;
@@ -193,7 +198,5 @@ public class TelevisionDto {
         this.ciModuleDto = ciModuleDto;
     }
 
-    public void setRemoteControllerDto(RemoteControllerDto remoteControllerDto) {
-        this.remoteControllerDto = remoteControllerDto;
-    }
+
 }
