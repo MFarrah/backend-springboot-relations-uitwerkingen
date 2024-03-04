@@ -1,4 +1,7 @@
 package mfarr.backendspringbootrelationsuitwerkingen.repositories;
 
-public class RemoteControlRepository {
+import mfarr.backendspringbootrelationsuitwerkingen.models.RemoteControl;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface RemoteControlRepository extends JpaRepository<RemoteControl, Long> {
 }
